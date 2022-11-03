@@ -9,7 +9,7 @@
 
 Comando :
 
-![image](https://user-images.githubusercontent.com/65261708/157998947-301d7eca-69fd-474c-98d3-792e7adda51d.png)
+![image]()
 
 3. Realizando consultas
 
@@ -19,7 +19,7 @@ Host: escuelaing.edu.co
 
 Resultado: 
 
-![image](https://user-images.githubusercontent.com/65261708/157999012-d887f709-20d4-4889-b759-ee7b0e7bc6b8.png)
+![image]()
 
 Obtuvimos el error 301, este error indica que el recurso ha sido movido permanentemente.
 
@@ -40,11 +40,11 @@ Comando :
 GET /html  HTTP/1.1
 Host: httpbin.org
 
-![image](https://user-images.githubusercontent.com/65261708/157999052-8792d73d-abdc-4429-a26e-5890d0e77d03.png)
+![image]()
 
 Resultado:
 
-![image](https://user-images.githubusercontent.com/65261708/157999066-87f8089b-2675-4377-8053-2a1c1b2923bf.png)
+![image]()
 
 Obtuvimos un mensaje de éxito (200) y se nos mostró el contenido en formato html.
 
@@ -56,7 +56,7 @@ Se crea y pega el contenido en un archivo llamado contenido.txt
 
 Con el comando wc -c se puede obtener la cantidad de caracteres del contenido del archivo contenido.txt.
 
-![image](https://user-images.githubusercontent.com/65261708/157999170-751dec77-203c-4b0b-bc84-8a0cea95c387.png)
+![image]()
 
 En este caso se obtuvo un total de 3743 caracteres.
 
@@ -85,13 +85,13 @@ Comando curl :
 
 curl www.httpbin.org 
 
-![image](https://user-images.githubusercontent.com/65261708/157999238-f9df5baa-1f9d-4311-a11e-70eb1e8be32d.png)
+![image]()
 
 Comando curl -v: 
 
 curl -v www.httpbin.org
 
-![image](https://user-images.githubusercontent.com/65261708/157999323-aeae0405-f959-4e31-9436-8fe98deaeab0.png)
+![image]()
 
 
 EL comando curl -v nos permite obtener el encabezado de la solicitud y el número de la respuesta obtenida.El modo detallado -v también hará que curl muestre todos los encabezados que envía y recibe. Permite visualizar la petición GET y el Host realizado para obtener el contenido.
