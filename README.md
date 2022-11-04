@@ -21,7 +21,7 @@ Host: escuelaing.edu.co
 
 Resultado: 
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u2.jpg)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u2.png)
 
 Como podemos ver en la imagen tenemos un código de error 301, lo que significa que el recurso ha sido movido permanentemente.
 
