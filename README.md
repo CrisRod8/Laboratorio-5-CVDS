@@ -5,11 +5,13 @@
 
 ## PARTE I - JUGANDO A SER UN CLIENTE HTTP
 
+1. Abra una terminal Linux o consola de comandos Windows.
+
 2. Realizando una conexión síncrona TCP/IP a través de Telnet
 
 Comando :
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u1.png)
 
 3. Realizando consultas
 
@@ -19,86 +21,82 @@ Host: escuelaing.edu.co
 
 Resultado: 
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u2.png)
 
-Obtuvimos el error 301, este error indica que el recurso ha sido movido permanentemente.
+Como podemos ver en la imagen tenemos un código de error 301, lo que significa que el recurso ha sido movido permanentemente.
 
 ¿Qué otros códigos de error existen?, ¿En qué caso se manejarán?
 
-Existen los errores 3xx los cuales son errores de redirección, le indican al ciente que los datos han sido transferidos a otra dirección y/o debe intentarlo con una nueva dirección.
+Tenemos los errores 300 que representan errores de redirección.
 
-Los errores 4xx indican errores que se producen por parte del cliente, como sintaxis incorrecta o datos no encontrados en la dirección indicada.
+Tenemos los errores 400 que indican errores que se generan por parte del cliente.
 
-Los errores 5xx indican errores que se producen por parte del servidor, tales como tiempo de espera excedido o errores internos entre otros.
+Y finalmente los errores 500 que significan errores que se producen por parte del servidor.
 
-4. Realizando nueva conexión a telnet
-
-En este punto empleamos una consola de Ubuntu para poder emplear los comandos de conteo de caracteres.
+4. Realizando nueva conexión a telnet.
 
 Comando :
 
 GET /html  HTTP/1.1
 Host: httpbin.org
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u3.png)
 
 Resultado:
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u4.png)
 
-Obtuvimos un mensaje de éxito (200) y se nos mostró el contenido en formato html.
+Nos muestra un mensaje de éxito 200 y el contenido en formato html.
 
-5. Contando palabras
+5. Contando palabras.
 
-Se copia el contenido html obtenido con CTRL + SHIFT + C.
+Se copia el contenido html obtenido con el comando: CTRL + SHIFT + C.
 
-Se crea y pega el contenido en un archivo llamado contenido.txt
+Se crea y pega el contenido en un archivo que llamamos contenido.txt
 
 Con el comando wc -c se puede obtener la cantidad de caracteres del contenido del archivo contenido.txt.
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u5.png)
 
 En este caso se obtuvo un total de 3743 caracteres.
 
 
-¿Cuál es la diferencia entre los verbos GET y POST?
+¿Cuál es la diferencia entre GET y POST?
 
-Tanto el método GET como POST son protocolos HTPP el cual envían al servidor como petición (request) y reciben una respuesta a dicha solicitud (response).
+Los métodos GET y POST son protocolos HTTP los cuales se envían al servidor como petición y reciben una respuesta a dicha solicitud.
 
-El concepto GET permite obtener información del servidor. Es decir, traer datos que están almacenadas en el servidor, ya sea una base de datos o archivo al cliente. El concepto POST en cambio es enviar información desde el cliente para que sea procesada y actualice o agregue información en el servidor, como sería la carga o actualización.
+Usando GET podemos obtener información del servidor, trayendo datos que están almacenadas en el servidor. Con POST podemos enviar información desde el cliente para que sea procesada y actualizada en el servidor.
 
 ¿Qué otros tipos de peticiones existen?
 
-Dentro del prótocolo HTTP se encuentran otras peticiones tales como:
+Además de GET y POST tenemos peticiones útiles como:
 
-HEAD : La petición HEAD pide una respuesta idéntica a la de una petición GET, pero este solo retorna el encabezado sin el cuerpo de la respuesta.
+HEAD : Pide una respuesta como en la petición GET, pero este solo retorna el encabezado sin el cuerpo de la respuesta.
 
-PUT : La petición PUT es usado para solicitar que el servidor almacene el cuerpo de la entidad en una ubicación específica dada por el URL.
+PUT : Es usado para solicitar que el servidor almacene el cuerpo de la entidad en una ubicación específica dada por URL.
 
-DELETE : Esta petición es utilizada para solicitar al servidor que elimine un archivo en una ubicación específica dada por la URL. Este método elimina un recurso determinado.
+DELETE : Es utilizada para solicitar al servidor que elimine un archivo en una ubicación específica dada por URL.
 
-CONNECT : Esta petición es usada para establecer una conexión de red con un servidor web mediante HTTP.
+CONNECT : Es usada para establecer una conexión de red con un servidor web mediante HTTP.
 
-6. Probando otro comando
+6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
 Comando curl :
 
 curl www.httpbin.org 
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u6.png)
 
 Comando curl -v: 
 
 curl -v www.httpbin.org
 
-![image]()
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u7.png)
 
 
-EL comando curl -v nos permite obtener el encabezado de la solicitud y el número de la respuesta obtenida.El modo detallado -v también hará que curl muestre todos los encabezados que envía y recibe. Permite visualizar la petición GET y el Host realizado para obtener el contenido.
+Con el comando curl -v podemos obtener el encabezado de la solicitud y el número de la respuesta obtenida. También hará que muestre todos los encabezados que envía y recibe. 
 
-El comando curl -i incluye el encabezado HTTP en la salida. El encabezado HTTP incluye cosas como nombre del servidor, fecha del documento, versión HTTP etc.
-
-El comando curl retorna únicamente el contenido del recurso solicitado.
+Con el comando curl -i nos incluye el encabezado HTTP en la salida, en este encabezado HTTP se incluye el nombre del servidor, fecha del documento, versión HTTP etc.
 
 
 ## PARTE II. - HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
