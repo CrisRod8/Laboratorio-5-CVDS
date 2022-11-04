@@ -248,10 +248,13 @@ mvn tomcat7:run
 10. Utilice la siguiente clase para consumir el servicio que se encuentra en la dirección url del punto anterior:
 
 ![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m7.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m8.png)
+
 
 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
 
 ![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m9.png)
+
 
 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la propiedad urlPatterns, indicando la URL (que usted defina) a la cual se asociará el servlet.
 
@@ -269,6 +272,5 @@ mvn tomcat7:run
 
 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’). Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m8.png)
 
 
