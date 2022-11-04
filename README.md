@@ -251,26 +251,24 @@ mvn tomcat7:run
 
 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m8.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m9.png)
 
 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la propiedad urlPatterns, indicando la URL (que usted defina) a la cual se asociará el servlet.
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m9.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m10.png)
 
 13. Teniendo en cuenta las siguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m10.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m11.png)
 
 ## PARTE III
 
 16. En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m11.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m12.png)
 
 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’). Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
 
-![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m12.png)
-
-Como podemos ver en la imagen anterior se hicieron los cambios necesarios para los requerimientos solicitados.
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m8.png)
 
 
