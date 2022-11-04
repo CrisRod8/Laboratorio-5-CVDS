@@ -7,16 +7,18 @@
 
 1. Abra una terminal Linux o consola de comandos Windows.
 
-2. Realizando una conexión síncrona TCP/IP a través de Telnet
+2. Realizando una conexión síncrona TCP/IP a través de Telnet.
 
-Comando :
+Host: www.escuelaing.edu.co
+Puerto: 80
+
+Comando:
 
 ![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/u1.png)
 
-3. Realizando consultas
+3. Realizando consultas.
 
 GET /sssss/abc.html HTTP/1.0
-
 Host: escuelaing.edu.co    
 
 Resultado: 
@@ -211,19 +213,21 @@ y agregue la seccion build al final del tag project en el archivo pom.xml:
 ~~~
 mvn package
 ~~~
-![](Img/mvn%20package%20lab05.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m1.png)
+
 ~~~
 mvn tomcat7:run
 ~~~
-![](Img/mvn%20tomcatrun%20lab05.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m2.png)
 
 5. Abra un navegador, y en la barra de direcciones ponga la URL con la cual se le enviarán peticiones al ‘SampleServlet’. Tenga en cuenta que la URL tendrá como host ‘localhost’, como puerto, el configurado en el pom.xml y el path debe ser el del Servlet. Debería obtener un mensaje de saludo.
    
-![](Img/nav%20hello%20lab05.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m3.png)
 
 6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
 
-![](Img/nav%20hello%20world%20lab05.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m4.png)
+
 7. Busque el artefacto gson en el repositorio de maven y agregue la dependencia.
 
 ~~~
@@ -235,38 +239,38 @@ mvn tomcat7:run
 ~~~
 8. En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del path de la url.
 
-![](Img/Json%20lab05.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m5.png)
 
 9. Basado en la respuesta que le da el servicio del punto anterior, cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y los métodos getter y setter para las propiedades de los "To Dos" que se encuentran en la url indicada.
 
-![image](https://user-images.githubusercontent.com/65261708/158000217-6065c886-b4a1-4845-8910-2690768054de.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m6.png)
 
 10. Utilice la siguiente clase para consumir el servicio que se encuentra en la dirección url del punto anterior:
 
-![image](https://user-images.githubusercontent.com/65261708/158000308-3eb93db8-ff36-4d43-985f-13698cedd998.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m7.png)
 
 11. Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
 
-![image](https://user-images.githubusercontent.com/65261708/158000371-1943a5ab-054c-420e-9e5a-26b9b1923c72.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m8.png)
 
 12. Para indicar en qué URL el servlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la propiedad urlPatterns, indicando la URL (que usted defina) a la cual se asociará el servlet.
 
-![image](https://user-images.githubusercontent.com/65261708/158000431-1e7ecf1f-8bd1-4b14-b5f0-b55e4e44c6a8.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m9.png)
 
 13. Teniendo en cuenta las siguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet
 
-![image](https://user-images.githubusercontent.com/65261708/158003726-c534026b-2819-43e6-bbd9-e4adb59f901f.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m10.png)
 
 ## PARTE III
 
 16. En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
 
-![image](https://user-images.githubusercontent.com/65261708/158003884-1321c7b8-3068-4fca-ba49-7b367e69cc1f.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m11.png)
 
 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usar como método ‘POST’, y como acción, la ruta relativa del último servlet creado (es decir la URL pero excluyendo ‘http://localhost:8080/’). Revise este ejemplo de validación de formularios con javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browser se valide que el valor ingresado es un valor numérico.
 
-![image](https://user-images.githubusercontent.com/65261708/158004165-48db73f9-c083-41e5-bb30-fc4cb97d4d7a.png)
+![image](https://github.com/CrisRod8/Laboratorio-5-CVDS/blob/main/pics/m12.png)
 
-En la captura se evidencian los cambios requeridos en el punto 18.
+Como podemos ver en la imagen anterior se hicieron los cambios necesarios para los requerimientos solicitados.
 
 
